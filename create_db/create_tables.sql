@@ -3,9 +3,9 @@ CREATE TABLE stazioni (
     nome varchar(20) NOT NULL,
     localita varchar(40) NOT NULL,
     comune varchar(40) NOT NULL,
-    provincia char(2) NOT NULL,
-    lat int(11) NOT NULL,
-    lon int(11) NOT NULL
+    provincia char(20) NOT NULL,
+    lat varchar(11) NOT NULL,
+    lon varchar(11) NOT NULL
 );
 CREATE TABLE rilevazioni (
     codseqst varchar(12),

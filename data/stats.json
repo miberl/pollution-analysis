@@ -1,9 +1,8 @@
 {
     "stazioni": [
-
         {
-            "nome": "Boscochiesanuova",
-            "localita": "Boscochiesanuova",
+            "nome": "Bosco Chiesanuova",
+            "localita": "Bosco Chiesanuova",
             "comune": "Verona",
             "provincia": "Verona",
             "tipozona": "BRU",
@@ -23,7 +22,7 @@
         },
         {
             "nome": "San Bonifacio",
-            "localita": "S. Bonifacio",
+            "localita": "San Bonifacio",
             "comune": "San Bonifacio",
             "provincia": "Verona",
             "tipozona": "TU",
@@ -32,8 +31,8 @@
             "codseqst": "500000120"
         },
         {
-            "nome": "VR-Giarol Grande",
-            "localita": "VR-Giarol Grande",
+            "nome": "Giarol Grande",
+            "localita": "Giarol Grande",
             "comune": "Verona",
             "provincia": "Verona",
             "tipozona": "BS",
@@ -42,8 +41,8 @@
             "codseqst": "500031115"
         },
         {
-            "nome": "Verona - C.so Milano",
-            "localita": "Verona - C.so Milano",
+            "nome": "C.so Milano",
+            "localita": "C.so Milano",
             "comune": "Verona",
             "provincia": "Verona",
             "tipozona": "TU",
