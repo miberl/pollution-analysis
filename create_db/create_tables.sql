@@ -15,4 +15,3 @@ CREATE TABLE rilevazioni (
     primary key (codseqst, data, tipoinquinante),
     foreign key (codseqst) references stazioni(codseqst)
 );
-
