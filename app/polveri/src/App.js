@@ -3,26 +3,29 @@ import React from 'react';
 import DeckGL from '@deck.gl/react';
 import {IconLayer} from '@deck.gl/layers';
 import {StaticMap} from 'react-map-gl';
+import {MapboxLayer} from '@deck.gl/mapbox';
+import logo from './static/location_pin.png'
 const coordinates = require('./data/coord.json')
+
 
 
 // Set your mapbox access token here
 const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1IjoibWliZXJsIiwiYSI6ImNrbnI0YnNmMDBsNWcydXF3end5bnJvMnYifQ.-iTvckAzIPYilCLo9G14sA';
 
 const ICON_MAPPING = {
-  marker: {x: 0, y: 0, width: 128, height: 128, mask: true}
+  marker: {x: 0, y: 0, width: 512, height: 512, mask: true}
 };
 
 // Viewport settings
 const INITIAL_VIEW_STATE = {
   longitude: 11.0,
-  latitude: 45.455,
-  zoom: 9.5,
+  latitude: 45.42,
+  zoom: 9.1,
   pitch: 0,
   bearing: 0
 };
 
-console.log(coordinates)
+
 
 function App ({viewState}) {
   const layer = new IconLayer({
@@ -31,7 +34,7 @@ function App ({viewState}) {
     pickable: true,
     // iconAtlas and iconMapping are required
     // getIcon: return a string
-    iconAtlas: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png',
+    iconAtlas: logo,
     iconMapping: ICON_MAPPING,
     getIcon: d => 'marker',
 
