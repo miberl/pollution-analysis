@@ -1,14 +1,20 @@
 import * as React from 'react';
-import {useState, useEffect, useMemo, useCallback} from 'react';
-import {render} from 'react-dom';
-import MapGL, {Source, Layer} from 'react-map-gl';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { render } from 'react-dom';
+//import MapGL, {Source, Layer} from 'react-map-gl';
+import MapGL, {
+  Source, Layer, Popup,
+  NavigationControl,
+  FullscreenControl,
+  ScaleControl,
+  GeolocateControl
+} from 'react-map-gl';
 import ControlPanel from './control-panel';
-import {dataLayer} from './map-style.js';
-import {updatePercentiles} from './utils';
-
-import {IconLayer} from '@deck.gl/layers';
-const logo = require('./static/location_pin.png')
-const coordinates = require('./data/coord.json')
+import Pins from './pins';
+import { dataLayer } from './map-style.js';
+import { updatePercentiles } from './utils';
+import CityInfo from './city-info';
+import CITIES from '../../.data/cities.json';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoibWliZXJsIiwiYSI6ImNrbnI0YnNmMDBsNWcydXF3end5bnJvMnYifQ.-iTvckAzIPYilCLo9G14sA'; // Set your mapbox token here
 
@@ -37,17 +43,17 @@ export default function App() {
   const onHover = useCallback(event => {
     const {
       features,
-      srcEvent: {offsetX, offsetY}
+      srcEvent: { offsetX, offsetY }
     } = event;
     const hoveredFeature = features && features[0];
 
     setHoverInfo(
       hoveredFeature
         ? {
-            feature: hoveredFeature,
-            x: offsetX,
-            y: offsetY
-          }
+          feature: hoveredFeature,
+          x: offsetX,
+          y: offsetY
+        }
         : null
     );
   }, []);
@@ -55,24 +61,37 @@ export default function App() {
   const data = useMemo(() => {
     return allData && updatePercentiles(allData, f => f.properties.income[year]);
   }, [allData, year]);
-
+  const [popupInfo, setPopupInfo] = useState(null);
   return (
     <>
       <MapGL
         {...viewport}
         width="100%"
         height="100%"
-        mapStyle="mapbox://styles/mapbox/light-v10"
+        mapStyle="mapbox://styles/mapbox/dark-v10"
         onViewportChange={setViewport}
         mapboxApiAccessToken={MAPBOX_TOKEN}
         interactiveLayerIds={['data']}
         onHover={onHover}
       >
+        <Pins data={CITIES} onClick={setPopupInfo} />
         <Source type="geojson" data={data}>
           <Layer {...dataLayer} />
         </Source>
+        {popupInfo && (
+          <Popup
+            tipSize={5}
+            anchor="top"
+            longitude={popupInfo.longitude}
+            latitude={popupInfo.latitude}
+            closeOnClick={false}
+            onClose={setPopupInfo}
+          >
+            <CityInfo info={popupInfo} />
+          </Popup>
+        )}
         {hoverInfo && (
-          <div className="tooltip" style={{left: hoverInfo.x, top: hoverInfo.y}}>
+          <div className="tooltip" style={{ left: hoverInfo.x, top: hoverInfo.y }}>
             <div>State: {hoverInfo.feature.properties.name}</div>
             <div>Median Household Income: {hoverInfo.feature.properties.value}</div>
             <div>Percentile: {(hoverInfo.feature.properties.percentile / 8) * 100}</div>
