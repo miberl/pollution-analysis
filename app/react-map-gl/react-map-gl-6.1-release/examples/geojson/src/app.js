@@ -26,7 +26,7 @@ export default function App() {
     bearing: 0,
     pitch: 0
   });
-  const [year, setYear] = useState(2015);
+  const [year, setYear] = useState(731);
   const [allData, setAllData] = useState(null);
   const [hoverInfo, setHoverInfo] = useState(null);
 
@@ -84,7 +84,7 @@ export default function App() {
             anchor="top"
             longitude={popupInfo.longitude}
             latitude={popupInfo.latitude}
-            closeOnClick={false}
+            closeOnClick={true}
             onClose={setPopupInfo}
           >
             <CityInfo info={popupInfo} />
@@ -103,6 +103,7 @@ export default function App() {
     </>
   );
 }
+
 
 export function renderToDom(container) {
   render(<App />, container);

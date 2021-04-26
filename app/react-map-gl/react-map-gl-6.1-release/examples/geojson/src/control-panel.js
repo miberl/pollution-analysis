@@ -1,13 +1,32 @@
 import * as React from 'react';
 
-function ControlPanel(props) {
-  const {year} = props;
 
+function inttoDate(val) {
+  let months = { "19": [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], "20": [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] }
+  let year = 19;
+  if (val > 365) {
+    year++;
+    val = val - 365;
+  };
+  let month = months[year.toString()];
+  let tot = 0;
+  for (let i = 1; i < 13; i++) {
+    for (let j = 1; j < (month[i - 1] + 1); j++) {
+      tot++;
+      if (tot == val)
+        return j + '/' + i + '/' + year;
+    }
+  }
+}
+
+function ControlPanel(props) {
+  const { year } = props;
+  const date = inttoDate(props.year);
   return (
     <div className="control-panel">
       <h3>Interactive GeoJSON</h3>
       <p>
-        Map showing median household income by state in year <b>{year}</b>. Hover over a state to
+        Dati relativi al giorno <b>{date}</b>. Hover over a state to
         see details.
       </p>
       <p>
@@ -28,8 +47,8 @@ function ControlPanel(props) {
         <input
           type="range"
           value={year}
-          min={1995}
-          max={2015}
+          min={1}
+          max={731}
           step={1}
           onChange={evt => props.onChange(evt.target.value)}
         />
