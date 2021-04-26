@@ -69,7 +69,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Hawaii",
+                "name": "Bosco Chiesanuova",
                 "income": {
                     "1995": 43973,
                     "1996": 43677,
@@ -130,7 +130,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Hawaii",
+                "name": "Borgo Milano",
                 "income": {
                     "1995": 43973,
                     "1996": 43677,
@@ -191,7 +191,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Hawaii",
+                "name": "San Bonifacio",
                 "income": {
                     "1995": 43973,
                     "1996": 43677,
