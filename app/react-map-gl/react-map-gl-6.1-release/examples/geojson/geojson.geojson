@@ -30,7 +30,7 @@
                 }
             },
             "geometry": {
-                "type": "MultiPolygon",
+                "type": "Polygon",
                 "coordinates": [
                     [
                         [
@@ -95,7 +95,7 @@
                 }
             },
             "geometry": {
-                "type": "MultiPolygon",
+                "type": "Polygon",
                 "coordinates": [
                     [
                         [
@@ -156,7 +156,7 @@
                 }
             },
             "geometry": {
-                "type": "MultiPolygon",
+                "type": "Polygon",
                 "coordinates": [
                     [
                         [
@@ -217,7 +217,7 @@
                 }
             },
             "geometry": {
-                "type": "MultiPolygon",
+                "type": "Polygon",
                 "coordinates": [
                     [
                         [
@@ -278,7 +278,7 @@
                 }
             },
             "geometry": {
-                "type": "MultiPolygon",
+                "type": "Polygon",
                 "coordinates": [
                     [
                         [
