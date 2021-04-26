@@ -3,17 +3,20 @@ import {useState, useEffect, useMemo, useCallback} from 'react';
 import {render} from 'react-dom';
 import MapGL, {Source, Layer} from 'react-map-gl';
 import ControlPanel from './control-panel';
-
 import {dataLayer} from './map-style.js';
 import {updatePercentiles} from './utils';
+
+import {IconLayer} from '@deck.gl/layers';
+const logo = require('./static/location_pin.png')
+const coordinates = require('./data/coord.json')
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoibWliZXJsIiwiYSI6ImNrbnI0YnNmMDBsNWcydXF3end5bnJvMnYifQ.-iTvckAzIPYilCLo9G14sA'; // Set your mapbox token here
 
 export default function App() {
   const [viewport, setViewport] = useState({
-    latitude: 40,
-    longitude: -100,
-    zoom: 3,
+    latitude: 45.42,
+    longitude: 11.0,
+    zoom: 9.1,
     bearing: 0,
     pitch: 0
   });
@@ -59,7 +62,7 @@ export default function App() {
         {...viewport}
         width="100%"
         height="100%"
-        mapStyle="mapbox://styles/mapbox/light-v9"
+        mapStyle="mapbox://styles/mapbox/light-v10"
         onViewportChange={setViewport}
         mapboxApiAccessToken={MAPBOX_TOKEN}
         interactiveLayerIds={['data']}
