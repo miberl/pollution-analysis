@@ -21,7 +21,7 @@ essere convogliate all'interno del flusso sanguigno.
 Le stazioni di rilevamento contengono gli strumenti di misura che rilevano la concentrazione di un dato inquinante i cui dati sono trasmessi al 
 COP (Centri Operativi Provinciali) che provvederà a validare ed elaborare per trasformarli in informazione ambientale.
 
-### PERCHE DI INVERNO L'INQUINAZIONE E' MAGGIORE?E PERCHE DI ESTATE IL E' MINORE?
+### PERCHE DI INVERNO L'INQUINAZIONE E' MAGGIORE?E PERCHE DI ESTATE E' MINORE?
 La risposta sta nello studio di quello strato d'aria che giace in prossimità del suolo, noto tecnicamente come strato limite planetario, che viene rappresentato, 
 ai fini della dispersione degli inquinanti, tramite appositi modelli di simulazione ad altissima risoluzione (fino a 200 metri).
 Concretamente dobbiamo immaginare questo spessore d'aria come un cuscino che durante l'inverno si presenta sottile e incollato al suolo a causa delle inversioni termiche. 
