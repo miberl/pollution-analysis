@@ -8,10 +8,11 @@ export function updatePercentiles(featureCollection, accessor) {
     type: 'FeatureCollection',
     features: features.map(f => {
       const value = accessor(f);
+      console.log(value);
       const properties = {
         ...f.properties,
         value,
-        percentile: scale(value)
+        percentile: value
       };
       return {...f, properties};
     })

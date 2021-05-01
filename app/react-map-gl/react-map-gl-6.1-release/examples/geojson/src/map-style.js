@@ -5,11 +5,12 @@ export const dataLayer = {
   paint: {
     'fill-color': {
       property: 'percentile',
+      type: 'interval',
       stops: [
         [0, '#5FDF4D'],
-        [1, '#E97F00'],
-        [2, '#d53e4f']
-      ]
+        [40, '#E97F00'],
+        [60, '#d53e4f']
+      ], default: "#ffffff"
     },
     'fill-opacity': 0.4
   }
