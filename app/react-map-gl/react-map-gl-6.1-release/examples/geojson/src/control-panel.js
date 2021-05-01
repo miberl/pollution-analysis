@@ -43,7 +43,7 @@ function ControlPanel(props) {
       <hr />
 
       <div key={'year'} className="input">
-        <label>Year</label>
+        <label>Date</label>
         <input
           type="range"
           value={year}

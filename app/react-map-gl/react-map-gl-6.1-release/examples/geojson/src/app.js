@@ -26,7 +26,7 @@ export default function App() {
     bearing: 0,
     pitch: 0
   });
-  const [year, setYear] = useState(731);
+  const [year, setYear] = useState(1);
   const [allData, setAllData] = useState(null);
   const [hoverInfo, setHoverInfo] = useState(null);
 
@@ -34,7 +34,7 @@ export default function App() {
     /* global fetch */
     fetch(
       //'https://raw.githubusercontent.com/uber/react-map-gl/master/examples/.data/us-income.geojson'
-      'https://raw.githubusercontent.com/miberl/Analisi-PM10/main/app/react-map-gl/react-map-gl-6.1-release/examples/geojson/geojson.geojson?token=ALGT6QKM7GM4FD4NPVR6OZTASAV7K'
+      'https://raw.githubusercontent.com/miberl/Analisi-PM10/main/app/react-map-gl/react-map-gl-6.1-release/examples/geojson/geojson.geojson?token=ALGT6QJY3FEGVQNRPYEJD4TASJORW'
     )
       .then(resp => resp.json())
       .then(json => setAllData(json));
@@ -78,7 +78,7 @@ export default function App() {
         <Source type="geojson" data={data}>
           <Layer {...dataLayer} />
         </Source>
-        {popupInfo && (
+        {(popupInfo && (
           <Popup
             tipSize={5}
             anchor="top"
@@ -89,14 +89,13 @@ export default function App() {
           >
             <CityInfo info={popupInfo} />
           </Popup>
-        )}
-        {hoverInfo && (
+        )) || (hoverInfo && (
           <div className="tooltip" style={{ left: hoverInfo.x, top: hoverInfo.y }}>
             <div>State: {hoverInfo.feature.properties.name}</div>
             <div>Median Household Income: {hoverInfo.feature.properties.value}</div>
             <div>Percentile: {(hoverInfo.feature.properties.percentile / 8) * 100}</div>
           </div>
-        )}
+        ))}
       </MapGL>
 
       <ControlPanel year={year} onChange={value => setYear(value)} />
