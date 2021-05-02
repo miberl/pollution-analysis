@@ -1,4 +1,11 @@
 {
+  "name": "deploy",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "npm": "7.5.0",
+    "node": "12.14.1"
+  },
   "scripts": {
     "start": "webpack-dev-server --progress --hot --open",
     "start-local": "webpack-dev-server --env.local --progress --hot --open"
