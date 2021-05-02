@@ -24,26 +24,17 @@ function ControlPanel(props) {
   const date = inttoDate(props.year);
   return (
     <div className="control-panel">
-      <h3>Interactive GeoJSON</h3>
+      <h3>Dati stazioni di rilevamento</h3>
       <p>
-        Dati relativi al giorno <b>{date}</b>. Hover over a state to
-        see details.
+        Dati relativi al giorno <b>{date}</b>
       </p>
       <p>
         Data source: <a href="www.census.gov">US Census Bureau</a>
       </p>
-      <div className="source-link">
-        <a
-          href="https://github.com/visgl/react-map-gl/tree/6.1-release/examples/geojson"
-          target="_new"
-        >
-          View Code ↗
-        </a>
-      </div>
       <hr />
 
       <div key={'year'} className="input">
-        <label>Date</label>
+        <label>Data</label>
         <input
           type="range"
           value={year}
@@ -75,7 +66,12 @@ function ControlPanel(props) {
       <svg name="h" fill="#000000" width="10" height="10"><circle r="5" cx="5" cy="5"></circle></svg>
       <span>&#160; nessuna rilevazione </span>
       </div>
-      
+      <div className="source-link">
+        <span>&#10;&#13;</span>
+        <a href="index.html">
+          Torna alla home ↗
+        </a>
+      </div>
     </div>
   );
 }
