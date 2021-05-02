@@ -34,7 +34,7 @@ export default function App() {
     /* global fetch */
     fetch(
       //'https://raw.githubusercontent.com/uber/react-map-gl/master/examples/.data/us-income.geojson'
-      'https://raw.githubusercontent.com/miberl/Analisi-PM10/main/app/react-map-gl/react-map-gl-6.1-release/examples/geojson/geojson.geojson?token=ALGT6QKQDAXKNLMWPCHT6ULAS2NYW'
+      'https://raw.githubusercontent.com/miberl/Analisi-PM10/main/app/analisi-pm10/geojson/geojson.geojson?token=ALGT6QKY57TN6D3KXQMUDPTATATWY'
     )
       .then(resp => resp.json())
       .then(json => setAllData(json));
