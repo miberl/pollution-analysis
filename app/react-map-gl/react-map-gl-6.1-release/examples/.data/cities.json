@@ -1,7 +1,7 @@
 [
-  {"city":"Legnago","population":"649,121","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Downtown_El_Paso_at_sunset.jpeg/240px-Downtown_El_Paso_at_sunset.jpeg","state":"Verona","latitude":45.18257622,"longitude":11.3105227},
-  {"city":"San Bonifacio","population":"649,121","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Downtown_El_Paso_at_sunset.jpeg/240px-Downtown_El_Paso_at_sunset.jpeg","state":"Verona","latitude":45.39886604,"longitude":11.28525559},
-  {"city":"Borgo Milano","population":"649,121","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Downtown_El_Paso_at_sunset.jpeg/240px-Downtown_El_Paso_at_sunset.jpeg","state":"Verona","latitude":45.44440358,"longitude":10.96300828},
-  {"city":"Bosco Chiesanuova","population":"649,121","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Downtown_El_Paso_at_sunset.jpeg/240px-Downtown_El_Paso_at_sunset.jpeg","state":"Verona","latitude":45.58921891,"longitude":11.03695043},
-  {"city":"Giarol Grande","population":"649,121","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Downtown_El_Paso_at_sunset.jpeg/240px-Downtown_El_Paso_at_sunset.jpeg","state":"Verona","latitude":45.433056,"longitude":11.030278}
+  {"city":"Legnago","population":"649,121","image":"https://www.arpa.veneto.it/temi-ambientali/aria/immagini/stazioni-di-monitoraggio/legnago/502313_vista1.gif","state":"Verona","latitude":45.18257622,"longitude":11.3105227},
+  {"city":"San Bonifacio","population":"649,121","image":"https://www.arpa.veneto.it/temi-ambientali/aria/immagini/stazioni-di-monitoraggio/s.-bonifacio/502310_vista4.gif","state":"Verona","latitude":45.39886604,"longitude":11.28525559},
+  {"city":"Borgo Milano","population":"649,121","image":"https://www.arpa.veneto.it/temi-ambientali/aria/immagini/stazioni-di-monitoraggio/vr-borgo-milano/502304_vista3.gif/image_preview","state":"Verona","latitude":45.44440358,"longitude":10.96300828},
+  {"city":"Bosco Chiesanuova","population":"649,121","image":"https://www.arpa.veneto.it/temi-ambientali/aria/immagini/stazioni-di-monitoraggio/boscochiesanuova/502314_4.jpg/image_preview","state":"Verona","latitude":45.58921891,"longitude":11.03695043},
+  {"city":"Giarol Grande","population":"649,121","image":"https://www.arpa.veneto.it/temi-ambientali/aria/immagini/stazioni-di-monitoraggio/vr-giarol-grande/502315_foto5.jpg/image_preview","state":"Verona","latitude":45.433056,"longitude":11.030278}
 ]

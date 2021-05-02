@@ -1,9 +1,0 @@
-{
-  "extends": "node_modules/ocular-dev-tools/templates/.nycrc",
-  "include": [
-    "modules/**/src/**/*.js"
-  ],
-  "exclude": [
-    "modules/test-utils/"
-  ]
-}

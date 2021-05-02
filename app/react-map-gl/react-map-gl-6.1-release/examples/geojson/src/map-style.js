@@ -7,11 +7,13 @@ export const dataLayer = {
       property: 'percentile',
       type: 'interval',
       stops: [
-        [0, '#5FDF4D'],
-        [40, '#E97F00'],
-        [60, '#d53e4f']
-      ], default: "#ffffff"
+        [0, '#000000'],
+        [1, '#3aeb34'],
+        [30, '#ffa600'],
+        [50, '#ff0000'],
+        [70, '#de00cf']
+      ], default: "#000000"
     },
-    'fill-opacity': 0.4
+    'fill-opacity': 0.40
   }
 };

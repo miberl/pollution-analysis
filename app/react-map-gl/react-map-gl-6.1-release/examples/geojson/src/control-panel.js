@@ -53,6 +53,29 @@ function ControlPanel(props) {
           onChange={evt => props.onChange(evt.target.value)}
         />
       </div>
+      <hr />
+      <p>Legenda - qualità dell'aria</p>
+      <div>
+      <svg name="h" fill="#3aeb34" width="10" height="10"><circle r="5" cx="5" cy="5"></circle></svg>
+      <span>&#160; buona - PM10 &#60; 30 </span>
+      </div>
+      <div>
+      <svg name="h" fill="#ffa600" width="10" height="10"><circle r="5" cx="5" cy="5"></circle></svg>
+      <span>&#160; media - PM10 30 - 50 </span>
+      </div>
+      <div>
+      <svg name="h" fill="#ff0000" width="10" height="10"><circle r="5" cx="5" cy="5"></circle></svg>
+      <span>&#160; bassa - PM10 50 - 70 (Sup. limite di legge) </span>
+      </div>
+      <div>
+      <svg name="h" fill="#de00cf" width="10" height="10"><circle r="5" cx="5" cy="5"></circle></svg>
+      <span>&#160; pessima - PM10 &#62; 70 (Sup. limite di legge) </span>
+      </div>
+      <div>
+      <svg name="h" fill="#000000" width="10" height="10"><circle r="5" cx="5" cy="5"></circle></svg>
+      <span>&#160; nessuna rilevazione </span>
+      </div>
+      
     </div>
   );
 }

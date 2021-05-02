@@ -91,11 +91,12 @@ export default function App() {
           </Popup>
         )) || (hoverInfo && (
           <div className="tooltip" style={{ left: hoverInfo.x, top: hoverInfo.y }}>
-            <div>State: {hoverInfo.feature.properties.name}</div>
-            <div>Median Household Income: {hoverInfo.feature.properties.value}</div>
-            <div>Percentile: {(hoverInfo.feature.properties.percentile / 8) * 100}</div>
+            <div>Stazione: {hoverInfo.feature.properties.name}</div>
+            <div>Rilevazione PM10: {hoverInfo.feature.properties.value}</div>
+           
           </div>
         ))}
+        
       </MapGL>
 
       <ControlPanel year={year} onChange={value => setYear(value)} />
@@ -107,3 +108,4 @@ export default function App() {
 export function renderToDom(container) {
   render(<App />, container);
 }
+//<div>Percentile: {(hoverInfo.feature.properties.percentile / 8) * 100}</div>
